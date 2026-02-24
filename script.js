@@ -1,2 +1,3 @@
-console.log("hello world");
-document.write("Hello world");
+ console.log("hello world");
+ document.write("Hello world");
+
