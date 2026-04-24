@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Product Page</title>
+
+<link rel="stylesheet" href="amazon.css">
+
+</head>
+
+<body>
+
+<h1>Product Details</h1>
+
+<div id="product-detail"></div>
+
+<script>
+
+const products = [
+
+{
+id:1,
+name:"Gaming Laptop",
+price:65000,
+img:"https://m.media-amazon.com/images/I/41Diz41FkhL._AC_SY200_.jpg"
+},
+
+{
+id:2,
+name:"Desktop Computer",
+price:42000,
+img:"https://m.media-amazon.com/images/I/41DjFnGQ1FL._AC_SY200_.jpg"
+},
+
+{
+id:3,
+name:"Boat Headphones",
+price:1999,
+img:"https://m.media-amazon.com/images/I/31aNgbvYJKL._AC_SY200_.jpg"
+},
+
+{
+id:4,
+name:"Gaming Headset",
+price:1499,
+img:"https://m.media-amazon.com/images/I/31G1NouVxaL._AC_SY200_.jpg"
+},
+
+{
+id:5,
+name:"Footwear",
+price:999,
+img:"https://m.media-amazon.com/images/I/31EXkIBVKUL._AC_SY200_.jpg"
+}
+
+]
+
+const id = localStorage.getItem("productId")
+
+const product = products.find(p => p.id == id)
+
+document.getElementById("product-detail").innerHTML = `
+
+<img src="${product.img}" width="300">
+
+<h2>${product.name}</h2>
+
+<p>Price : ₹${product.price}</p>
+
+<button>Add to Cart</button>
+
+`
+
+</script>
+
+</body>
+
+</html>
